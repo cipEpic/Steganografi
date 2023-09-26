@@ -1,0 +1,2 @@
+1. gambar fruits.jpeg telah disisipkan pesan dan disimpan ke dalam file baru bernama Evi-fruits-encode.jpeg
+2. fungsi modPix adalah menyisipkan data ke dalam piksel gambar dengan menggunakan metode steganografi. Code jpeg.py juga telah dimodifikasi sehingga hanya 7 bit data yang digunakan, nama filenya adalah jpeg-modify.py.
