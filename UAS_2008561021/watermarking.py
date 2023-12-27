@@ -56,43 +56,25 @@ class LSB():
         # Kembalikan gambar yang sudah diencode
         return encoded
 
- # decoding part :
-def decode_image(self, img):
-    # Dapatkan lebar dan tinggi gambar
-    width, height = img.size
-    
-    # Inisialisasi pesan yang akan diambil
-    msg = ""
-    
-    # Inisialisasi indeks dan panjang pesan
-    index = 0
-    length = 0
-    
-    # Iterasi melalui setiap piksel dalam gambar
-    for row in range(height):
-        for col in range(width):
-            # Dapatkan nilai RGB dari piksel
-            if img.mode != 'RGB':
-                r, g, b, a = img.getpixel((col, row))
-            elif img.mode == 'RGB':
-                r, g, b = img.getpixel((col, row))
-            
-            # Nilai r dari piksel pertama (baris=0, kolom=0) menyimpan panjang pesan
-            if row == 0 and col == 0:
-                length = b
-            elif index <= length:
-                # Ambil nilai ASCII dari komponen warna biru (b) dan konversi ke karakter
-                msg += chr(b)
-            
-            # Pindah ke karakter berikutnya dalam pesan
-            index += 1
-
-    # Nama file untuk gambar yang sudah di-decode (tidak digunakan dalam fungsi ini)
-    lsb_decoded_image_file = "lsb_" + original_image_file
-
-    # Kembalikan pesan yang telah diambil dari gambar
-    return msg
-
+    #decoding part :
+    def decode_image(self,img):
+        width, height = img.size
+        msg = ""
+        index = 0
+        for row in range(height):
+            for col in range(width):
+                if img.mode != 'RGB':
+                    r, g, b ,a = img.getpixel((col, row))
+                elif img.mode == 'RGB':
+                    r, g, b = img.getpixel((col, row))  
+                # first pixel r value is length of message
+                if row == 0 and col == 0:
+                    length = b
+                elif index <= length:
+                    msg += chr(b)
+                index += 1
+        lsb_decoded_image_file = "lsb_" + original_image_file
+        return msg
 
 
 #driver part :
