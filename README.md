@@ -1,2 +1,7 @@
 # Steganografi
 Mata kuliah Steganografi
+
+1. Tugas 1 : https://github.com/cipEpic/Steganografi/tree/main/Tugas/2008561021
+2. Tugas 2 : https://github.com/cipEpic/Steganografi/tree/main/RGB_2008561021
+3. Tugas 3 : https://github.com/cipEpic/Steganografi/tree/main/%5B2008561021%5D%20Tugas%201
+4. UAS : https://github.com/cipEpic/Steganografi/tree/main/UAS_2008561021
